@@ -1,0 +1,15 @@
+@use 'utilities/reset';
+@use 'utilities/animations';
+@use 'utilities/colors' as *;
+@use 'utilities/small';
+@use 'utilities/medium';
+@use 'utilities/large';
+
+body {
+	height: 100vh;
+	background-color: $dark;
+	font-family: 'Raleway', sans-serif;
+	// font-family: 'Cinzel', serif;
+	font-size: 1.6rem;
+	color: $white;
+}
