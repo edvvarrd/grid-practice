@@ -2,8 +2,6 @@
 @use 'utilities/animations';
 @use 'utilities/colors' as *;
 
-// font-family: 'Cinzel', serif;
-
 body {
 	height: 100vh;
 	background-color: $dark;
@@ -126,7 +124,67 @@ body {
 		}
 	}
 }
-
+// main
+////
+// cards
+.cards {
+	background-color: $darker;
+	overflow: hidden;
+	&__box {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		gap: 2em;
+		padding: 6em 2em;
+	}
+	&__card {
+		position: relative;
+		display: grid;
+		grid-column: 1/-1;
+		justify-items: center;
+		padding: 3em;
+		text-align: center;
+		border: 1px solid transparent;
+		border-radius: 8px;
+		background-color: $dark;
+		transition: background-color 0.3s, border 0.3s;
+		z-index: 5;
+		&:hover {
+			background-color: $darker;
+			border: 1px solid $gold;
+			z-index: 1;
+		}
+		&::before {
+			position: absolute;
+			content: '';
+			width: 100%;
+			height: 100%;
+			border: 1px solid $gold;
+			border-radius: 8px;
+			opacity: 0;
+		}
+		&:hover::before {
+			animation: pulse 1s;
+		}
+		img {
+			margin-bottom: 1em;
+			width: 60px;
+		}
+		h3 {
+			margin-bottom: 0.6em;
+			text-transform: uppercase;
+		}
+		&--one {
+			grid-row: 1/2;
+		}
+		&--two {
+			grid-row: 2/3;
+		}
+		&--three {
+			grid-row: 3/4;
+		}
+	}
+}
 @import 'utilities/small';
 @import 'utilities/medium';
 @import 'utilities/large';

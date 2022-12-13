@@ -4,4 +4,21 @@
 			background-image: url('../img/header_big.jpg');
 		}
 	}
+	.cards {
+		&__box {
+			padding: 10em 2em;
+		}
+		&__card {
+			grid-row: 1/-1;
+			&--one {
+				grid-column: 1/2;
+			}
+			&--two {
+				grid-column: 2/3;
+			}
+			&--three {
+				grid-column: 3/4;
+			}
+		}
+	}
 }
