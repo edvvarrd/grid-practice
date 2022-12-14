@@ -340,6 +340,9 @@ body {
   font-size: 1.8rem;
   color: #d6c78e;
 }
+.plans__item-bold {
+  font-weight: 800;
+}
 
 .newsletter {
   padding: 8em 2em;
