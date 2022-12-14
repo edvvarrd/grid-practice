@@ -377,21 +377,14 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.gallery__img {
-  overflow: hidden;
-}
-.gallery__img img {
+.gallery img {
   height: 300px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  transition: transform 0.3s;
 }
-.gallery__img img:nth-child(odd) {
+.gallery img:nth-child(odd) {
   display: none;
-}
-.gallery__img img:hover {
-  transform: scale(1.1);
 }
 
 .contact {
@@ -407,9 +400,7 @@ body {
   font-size: 2rem;
 }
 .contact__form-box textarea {
-  max-width: 100%;
-  width: 100%;
-  min-width: 100%;
+  resize: vertical;
 }
 .contact__form-box input,
 .contact__form-box textarea {

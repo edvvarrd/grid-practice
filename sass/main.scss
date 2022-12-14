@@ -319,19 +319,12 @@ body {
 .gallery {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	&__img {
-		overflow: hidden;
-		img {
-			height: 300px;
-			width: 100%;
-			object-fit: cover;
-			transition: transform 0.3s;
-			&:nth-child(odd) {
-				display: none;
-			}
-			&:hover {
-				transform: scale(1.1);
-			}
+	img {
+		height: 300px;
+		width: 100%;
+		object-fit: cover;
+		&:nth-child(odd) {
+			display: none;
 		}
 	}
 }
@@ -349,9 +342,7 @@ body {
 			font-size: 2rem;
 		}
 		textarea {
-			max-width: 100%;
-			width: 100%;
-			min-width: 100%;
+			resize: vertical;
 		}
 		input,
 		textarea {
