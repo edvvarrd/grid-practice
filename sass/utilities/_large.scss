@@ -1,4 +1,10 @@
 @media (min-width: 992px) {
+	.section-title {
+		font-size: 4.8rem;
+		&::before {
+			height: 4px;
+		}
+	}
 	.header {
 		grid-template-rows: auto repeat(2, 1fr);
 		.company-name {
@@ -85,5 +91,8 @@
 				font-size: 2.2rem;
 			}
 		}
+	}
+	.gallery {
+		grid-template-columns: repeat(8, 1fr);
 	}
 }
